@@ -10,7 +10,7 @@ dependency order:
 5. `python -m src.backtest`
 
 It runs on weekdays at 23:00 UTC and can also be started manually. Each run
-uses Python 3.11, installs `requirements.txt`, and has a 30-minute timeout.
+uses Python 3.12, installs `requirements.txt`, and has a 30-minute timeout.
 Reports are uploaded as the `spy-market-analytics-reports` artifact for 14 days,
 even if an earlier pipeline step fails. The workflow does not commit or push
 generated data, models, or reports; no broker or live-trading integration is
@@ -43,7 +43,7 @@ step logs or download its reports artifact.
   step logs and retry the workflow later; failures are not silently replaced
   with stale data.
 - **Dependency installation fails:** Check the `requirements.txt` pins and the
-  Python 3.11 setup step, then inspect the install log for package or wheel
+  Python 3.12 setup step, then inspect the install log for package or wheel
   compatibility errors.
 - **A later stage fails:** The workflow stops at the failing stage. Use that
   step's logs to identify missing or invalid input artifacts. The report
