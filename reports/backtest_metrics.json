@@ -1,0 +1,31 @@
+{
+  "initial_capital": 10000.0,
+  "transaction_cost_rate": 0.001,
+  "trading_days_per_year": 252,
+  "risk_free_rate": 0.0,
+  "target_used_for_decisions": false,
+  "return_interval": "next trading day's open to following trading day's open",
+  "executable_intervals": 445,
+  "signal_date_range": {
+    "start": "2025-02-07",
+    "end": "2026-11-13"
+  },
+  "strategy": {
+    "total_return": 0.11043690426836905,
+    "annualized_return": 0.06111591971651431,
+    "annualized_volatility": 0.16266631322817993,
+    "sharpe_ratio": 0.4459930717513969,
+    "maximum_drawdown": -0.24287334803951732,
+    "position_changes": 18,
+    "transaction_costs": 170.85048236971772
+  },
+  "benchmark": {
+    "total_return": 0.24396298754329426,
+    "annualized_return": 0.13158900282886865,
+    "annualized_volatility": 0.17382783399956825,
+    "sharpe_ratio": 0.7978284600859348,
+    "maximum_drawdown": -0.1976622770871056,
+    "position_changes": 2,
+    "transaction_costs": 22.452081957390334
+  }
+}
