@@ -1,0 +1,75 @@
+{
+  "target": "future_5d_return",
+  "target_horizon_trading_days": 5,
+  "feature_names": [
+    "ret_1d",
+    "ret_5d",
+    "ret_20d",
+    "ma_5_ratio",
+    "ma_20_ratio",
+    "volatility_20d",
+    "volume_ratio_20d",
+    "yield_lag_1d",
+    "yield_change_5d",
+    "weekday_Monday",
+    "weekday_Tuesday",
+    "weekday_Wednesday",
+    "weekday_Thursday",
+    "weekday_Friday"
+  ],
+  "split_rows": {
+    "train": 2070,
+    "validation": 440,
+    "test": 445
+  },
+  "purged_rows": {
+    "after_train_before_validation": 5,
+    "after_validation_before_test": 5
+  },
+  "split_date_boundaries": {
+    "train": {
+      "start": "2015-02-02",
+      "end": "2023-04-21"
+    },
+    "validation": {
+      "start": "2023-05-01",
+      "end": "2025-01-30"
+    },
+    "test": {
+      "start": "2025-02-07",
+      "end": "2026-11-13"
+    }
+  },
+  "validation": {
+    "baseline": {
+      "mae": 0.01368018342751417,
+      "rmse": 0.017674197638857587,
+      "r2": -0.01979561189510326,
+      "prediction_actual_pearson_correlation": 4.325614866047171e-18,
+      "directional_accuracy": 0.6454545454545455
+    },
+    "random_forest": {
+      "mae": 0.014565797398546259,
+      "rmse": 0.018626868412127975,
+      "r2": -0.13269613277872705,
+      "prediction_actual_pearson_correlation": -0.13184989199898786,
+      "directional_accuracy": 0.5568181818181818
+    }
+  },
+  "test": {
+    "baseline": {
+      "mae": 0.015620480869773638,
+      "rmse": 0.021437352122993376,
+      "r2": -7.41504941208504e-05,
+      "prediction_actual_pearson_correlation": -3.076407200815385e-17,
+      "directional_accuracy": 0.5730337078651685
+    },
+    "random_forest": {
+      "mae": 0.01625192056139909,
+      "rmse": 0.022459062200776005,
+      "r2": -0.09767343688323704,
+      "prediction_actual_pearson_correlation": -0.08251749723753495,
+      "directional_accuracy": 0.5573033707865168
+    }
+  }
+}
